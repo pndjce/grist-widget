@@ -1,4 +1,4 @@
-*(français plus bas)*
+[*(français plus bas)*](#french)
 
 # Kanban
 *Kanban2* is a widget to display a Kanban board.
@@ -23,7 +23,6 @@
 1. Prepare your table to be compatible with the widget:
     * A *Status* column that must be of the *Choice* type, with each element corresponding to a column. Customize the color and order of the choices to adjust the Kanban display.
     * A *Task* column containing the main text of the card.
-    * A *Dead line* column of type *Date*, used to organize cards in a column. Either by indicating a date, or by reorganizing them.
     * The other columns are optional.
 2. Add a new *Custom* view to your page, choosing as source the table on which the Kanban is to be based.
 3. Choose the *Customized URL* widget and paste the following URL into the field: https://varamil.github.io/grist-widget/kanban2/min/index.html then click on *Add widget*.
@@ -39,6 +38,8 @@
 ## Configuration 
 ### Table columns
 In addition to the mandatory columns, the following columns can be assigned:
+* *Task Display* : let you control how the task description is displayed. For example, can be a formula column that format the raw text in *Task* column.
+* *Dead line*: type of *Date*, used to organize cards in a column. Either by indicating a date, or by reorganizing them.
 * *Reference*: associates a reference with the task, which is then displayed specifically on the card, in the top-right corner.
 * *Type*: associates a type with the task. Appears on the card as a label at top-left corner.
 * *Responsible*: who is responsible for the task. Appears as a label at bottom right.
@@ -61,6 +62,7 @@ In Grist's right panel, when you click on *Open configuration*, the widget displ
     * *Tilt*: if checked, cards are randomly rotated, giving a “post-it” look to the cards, but the cards then appear slightly blurred, so some may prefer to disable this option to have straight cards.
     * *Compact*: if checked, uses a compact display, spaces are reduced, the add button is placed in the column title and not at the top of the cards.
     * *Read only*: if checked, the kanban is read-only.
+    * *Hide editing form* : If checked, the form that appears when you click on a card will no longer be displayed. This is useful if you want to develop your own form in another related widget.
 * *Localization*: offers the user the option of making their own translation of the widget (for languages not offered by default). To create a new translation, first click on the *Extract* button, which will list all the texts to be translated. Then, by clicking on the chevron “>”, define the translation for each element. By saving the options, your translation will be taken into account. Feel free to share your translations by creating an *issue* on this Github. Click on the *Export* button to copy your translations to the clipboard, and then simply paste the content into your *issue*.
 
 ## Use
@@ -83,7 +85,7 @@ Varamil - [GitHub](https://github.com/Varamil) - who took care of Grist integrat
 
 
 
-# Français
+# <a name="french"></a>Français
 *Kanban2* est un widget pour afficher un tableau sous forme de Kanban. 
 
 *(il remplace la précédente version disponible également sur ce serveur)*
@@ -106,7 +108,6 @@ Varamil - [GitHub](https://github.com/Varamil) - who took care of Grist integrat
 1. Préparer votre tableau pour être compatible avec le widget :
     * Une colonne *Statut* qui doit être de type *Choix unique* et dont chaque élément correspondra à une colonne. Personnalisez la couleur et l'ordre des choix pour ajuster l'affichage du Kanban.
     * Une colonne *Tâche* qui contiendra le texte principal de la carte.
-    * Une colonne *Date limite* de type *Date*, elle sert à organiser les cartes dans une colonne. Soit en indiquant une date, soit en les réorganisant.
     * Les autres colonnes sont optionnelles
 2. Ajouter une nouvelle vue de type *Personnalisée* à votre page en choisissant comme source la table sur laquelle doit se baser le Kanban
 3. Choisir le widget *URL personnalisé* et coller dans le champ l'URL suivante :  https://varamil.github.io/grist-widget/kanban2/min/index.html puis cliquer sur *Ajouter un widget*
@@ -122,6 +123,8 @@ Varamil - [GitHub](https://github.com/Varamil) - who took care of Grist integrat
 ## Configuration 
 ### Les colonnes du tableau
 En plus des colonnes obligatoires les colonnes suivantes peuvent être affectées :
+* *Affichage de la tâche* : permet de contrôler comment la description de la tâche est affichée dans la carte. Par exemple, peut être une colonne formule qui va formater le texte brute contenu dans la colonne *Tâche*. 
+* *Date limite* : de type *Date*, elle sert à organiser les cartes dans une colonne. Soit en indiquant une date, soit en les réorganisant.
 * *Référence* : associe une référence à la tâche, elle est ensuite affichée de manière spécifique sur la carte, en haut à droite.
 * *Type* : associe un type à la tâche. Apparait sur la carte sous forme d'une étiquette à haut à gauche.
 * *Responsable* : qui doit s'occuper de la tâche. Est représenté par une étiquette en bas à droite.
@@ -144,6 +147,7 @@ Dans le volet de droite de Grist, quand on clique sur *Ouvrir la configuration*,
     * *Cartes pivotées* : si coché, les cartes sont aléatoirement pivotées, rendant un aspet "post-it" aux cartes, mais les cartes apparaissent alors légèrement floutées, certains préfèreront désactiver cette option pour avoir des carte droite.
     * *Compact* : si coché, utilise un affichage compact, les espaces sont réduits, le bouton d'ajout est placé dans le titre de la colonne et non en haut des cartes.
     * *Lecture seule* : si coché, le Kanban est alors en lecture seule.
+    * *Cacher le formulaire d'édition* : si coché le formulaire qui s'affiche quand on clique sur une carte ne s'affiche plus. C'est utile si on veut développer son propre formulaire dans un autre widget lié.
 * *Localisation* : offre à l'utilisateur la possibilité de faire sa propre traduction du widget (pour les langues qui ne sont pas proposées par défaut). Pour créer une nouvelle traduction, il faut dans un premier temps cliquer sur le bouton *Extraire* qui va liste tous les textes à traduire. Puis en cliquant sur le chevron ">", définir la traduction de chaque élément. En enregistrant les options, votre traduction sera alors prise en compte. N'hésitez pas à partager vos traductions en créant une *issue* sur ce Github. Cliquez sur le bouton *Exporter* pour copier vos traduction dans le presse-papier, et vous n'aurez qu'à coller le contenu dans votre *issue*.
 
 ## Utilisation

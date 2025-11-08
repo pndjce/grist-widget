@@ -237,7 +237,7 @@ class f {
 }
 class d {
   constructor() {
-    console.log("WidgetSDK: 1.2.0.60");
+    console.log("WidgetSDK: 1.2.0.59");
     const t = new URLSearchParams(window.location.search);
     this.cultureFull = t.has("culture") ? t.get("culture") : "en-US", this.culture = this.cultureFull.split("-")[0], this.currency = t.has("currency") ? t.get("currency") : "USD", this.timeZone = t.has("timeZone") ? t.get("timeZone") : "", this._gristloaded = !1, this._optloaded = !1, this._ismapped = !1, this.initDone = !1, this.urlSDK = "https://varamil.github.io/grist-widget/widgetSDK", grist.on("message", async (e) => {
       e.fromReady && (this._gristloaded = e.fromReady);
@@ -902,10 +902,7 @@ Thanks a lot for your time !`));
   }
   /** Maps columns from grist to widget name, but keeping all non mapped column (instead of grist.mapColumnNames) */
   mapColumnNames(t, e = null) {
-    return e || (e = this.map), e ? (e.id = "id", Array.isArray(t) ? t.map((s) => this.mapColumnNames(s, e)) : Object.fromEntries(Object.entries(e).map((s) => {
-      const a = s[1];
-      return a && Array.isArray(a) ? [s[0], a.map((n) => t[n])] : [s[0], a && t[a]];
-    }))) : t;
+    return e || (e = this.map), e ? Array.isArray(t) ? t.map((s) => this.mapColumnNames(s, e)) : (e = Object.fromEntries(Object.entries(e).map((s) => s[1] ? [s[1], s[0]] : [s[0], s[1]])), Object.fromEntries(Object.entries(t).map((s) => [e[s[0]] ?? s[0], s[1]]))) : t;
   }
   /** Encapsulate grist.OnRecords to ensure the correct timing between the options and mapping loading 
    * and the execution of the main function
